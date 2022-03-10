@@ -6,10 +6,9 @@ array = []
 
 for i in range(N):
     x, y = map(int, input().split())
-    array.append([x,y])
+    array.append([y,x])
 
-array.sort(key=lambda x:(x[1]))
+array = sorted(array)
 
-for x, y in array:
-    print(x,y)
-    
+for i in range(N):
+    print(array[i][1], array[i][0])
